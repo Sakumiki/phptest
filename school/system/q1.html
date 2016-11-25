@@ -1,0 +1,82 @@
+﻿<?php
+require_once __DIR__ . '/func.php';
+require_unlogined_session();
+$conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
+$bango = $_SESSION['id'];
+?>
+<html>
+<head>
+<title>test201.php</title>
+<link rel="stylesheet" type="text/css" href="./assets/q1style.css">
+<link rel="stylesheet" type="text/css" href="./assets/button.css">
+
+</head>
+<body>
+<h1>アンケート1</h1>
+<h2></h2>
+<hr />
+
+<section>
+<form method="post" action="q1.php">
+
+
+<!--------------------------------------------------------------------
+							Form
+--------------------------------------------------------------------->
+<table class="q1" align="center">
+
+<tr>
+<th>一番好きな音楽のジャンル</th>
+
+<td><label class="select-group">
+<select name="qMGenre">
+	<option value="">--
+	<option value="J-POP">J-POP(邦楽)全般
+	<option value="洋楽">洋楽
+	<option value="ロック">ロック
+	<option value="クラシック">クラシック
+	<option value="アニソン">アニソン
+	<option value="EDM">EDM
+</select>
+</label></td>
+</tr>
+
+<tr>
+<th>一番好きなグループ体系</th>
+<td><label class="select-group">
+<select name="qMSystem">
+	<option value="">--
+	<option value="女性アイドル">女性アイドルグループ
+	<option value="男性アイドル">男性アイドルグループ
+	<option value="シンガーソングライター">シンガーソングライター
+	<option value="バンド">バンド
+	<option value="その他">その他
+</select>
+</label></td>
+</tr>
+	
+<tr>
+<th>好きなアーティスト</th>
+<td>
+<p>1<input type="text" name="qMArtist1" value="" required>※必須</p>
+<p>2<input type="text" name="qMArtist2" ></p>
+<p>3<input type="text" name="qMArtist3"></p>
+</td>
+</tr>
+
+</table>
+
+<button class="btn btn-blue btn-fill-vert-o" onclick="location.href='./home.html'">HOMEへ</button>
+<button type="submit" class="btn btn-blue btn-fill-vert-o">編集完了</button>
+
+</form>
+</section>
+
+
+<!--------------------------------------------------------------------
+							PHP
+--------------------------------------------------------------------->
+
+</body>
+
+</html>

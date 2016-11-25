@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body{
+	  text-align: center;
+}
+
+
+
+input[type="text"]{
+	width: 70px;
+	height: 35px;
+	font-size: 20px;
+	margin-top: 4px;
+	margin-right: 15px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	border:2px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="text"]:hover{
+    border:2px solid #e74c3c;
+}
+
+th{
+	width: 70px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1{
+	text-align: center;
+}

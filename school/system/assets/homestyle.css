@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+
+input[type="radio"]{
+	display: none;
+	cursor: pointer !important;
+}
+input[type="radio"]+label{/*チェックボックス*/
+	cursor: pointer !important;
+	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+	padding: 0 3px;
+	transition-property: background-color;
+	transition-duration:0.2s;
+	transition-delay:0s;
+	border-radius: 5px;
+	border:2px solid #ccc;
+	height:30px;
+	line-height:30px;
+	padding-left:6px;
+	padding-right:6px;
+}
+input[type="radio"]+label:hover{ /*オンマウス状態のラベルの装飾*/
+	background-color: #2ecc71;
+	color: white;
+	border-color:#2ecc71;
+	border-radius: 5px;
+}
+input[type="radio"]:checked+label{
+	border:2px solid #2ecc71;
+	color:#2ecc71;
+	background:white;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1{
+	text-align: center;
+}
+
+
+.select-group
+{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: 45px;
+    padding: 0;
+    margin-right: 8px;
+	//z-index: 2;
+	user-select: none;
+	
+	
+    vertical-align: middle;
+
+    border: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.select-group:after{
+    position: absolute;
+    top: 0;
+    right: 6px;
+    bottom: 0;
+    //z-index: 1;
+    
+    width: 0;
+    height: 0;
+    margin: auto;
+    content: '';
+    border-radius: 5px;
+
+    border-top: 4px solid #777;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.select-group:hover:after{
+	border-top: 4px solid #fff;
+}
+
+select{
+   background: #fff;
+   width: 45px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border-radius: 5;
+   border:2px solid #ccc;
+   height: 34px;
+   -webkit-appearance: none;
+   z-index: 1;
+}
+
+select:hover{
+    background: #2ecc71;
+    color: #fff;
+    border: #2ecc71;
+}
+
+select::selection {
+	background: #2ecc71; color: #2ecc71;
+}
+select::-moz-selection {
+	background: #2ecc71; color: #2ecc71;
+}
+
+
+table {
+	border-collapse: collapse;
+	width:600px;
+}
+th {
+	border-bottom: #f3f3f3 2px dotted;
+	text-align: left;
+	padding: 10px;
+	font-weight: normal;
+	width: 250px;
+	text-indent: 1.3em;
+}
+td.t_top {
+	border-top: #b3b3b3 4px solid;
+}
+td {
+	border-bottom: #f3f3f3 2px dotted;
+	text-align: left;
+	width: auto;
+	padding: 10px;
+
+}
+tr:hover {
+    background: #f0f0f0;
+    color: #000;
+}
