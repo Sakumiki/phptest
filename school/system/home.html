@@ -3,7 +3,19 @@ require_once __DIR__ . '/func.php';
 require_unlogined_session();
 $conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
 $bango = $_SESSION['id'];
+
+$result1 = pg_query("select * from tbl_q1 where bango ='".$bango."'");
+$result2 = pg_query("select * from tbl_q1 where bango ='".$bango."'");
+$result3 = pg_query("select * from tbl_q1 where bango ='".$bango."'");
+$q1 = "回答済";
+$q2 = "回答済";
+$q3 = "回答済";
+
+if(pg_numRows($result1) == 0)	$q1 = "未回答";
+if(pg_numRows($result2) == 0)	$q2 = "未回答";
+if(pg_numRows($result3) == 0)	$q3 = "未回答";
 ?>
+
 <html>
 <head>
 <title>test201.php</title>
@@ -14,18 +26,27 @@ $bango = $_SESSION['id'];
 <body>
 <h1>登録</h1>
 <hr />
-<p>ユーザー : <?php print($bango); ?></p>
-
+<p align="center">ユーザー : <?php print($bango); ?></p>
 <section>
-<p>性別や誕生日などの情報を編集する</p>
-<button class="btn btn-blue btn-fill-vert-o" onclick="location.href='./general.html'">編集する</button>
-<p>アンケートに答える</p>
-<button class="btn btn-blue btn-fill-vert-o" onclick="location.href='./q1.html'">アンケート</button>
+<h2>性別や誕生日などの情報を編集する</h2>
+<button class="btn btn-orange btn-fill-vert-o" onclick="location.href='./general.html'">編集する</button>
+<h2>アンケートに答える</h2>
+<table align="center">
+<tr>
+<th>音楽系統のアンケート(<?php $q1 ?>)</th>
+<th>音楽系統のアンケート(<?php $q2 ?>)</th>
+<th>音楽系統のアンケート(<?php $q3 ?>)</th>
+</tr>
+<tr>
+<td><button class="btn btn-orange btn-fill-vert-o" onclick="location.href='./q1.html'">アンケート1</button></td>
+<td><button class="btn btn-orange btn-fill-vert-o" onclick="location.href='./q2.html'">アンケート2</button></td>
+<td><button class="btn btn-orange btn-fill-vert-o" onclick="location.href='./q3.html'">アンケート3</button></td>
+</tr>
 </section>
 
 <!--------------------------------------------------------------------
 							PHP
---------------------------------------------------------------------->
+-------------------------------------------------------------------
 <?php
 
 function fncNseiki($funNum){
@@ -100,7 +121,7 @@ if(isset($_POST["frmName"]) && $_POST["frmName"]){
 }
 
 
-?>
+?>-->
 
 </body>
 
