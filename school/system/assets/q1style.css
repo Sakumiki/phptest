@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(../fonts/Montserrat.css);
+@import url(../fonts/opne_sans.css);
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -62,27 +62,6 @@ input[type="text"]:hover{
     background-repeat: no-repeat;
 }
 
-.select-group:after{
-    position: absolute;
-    top: 0;
-    right: 6px;
-    bottom: 0;
-    //z-index: 1;
-    
-    width: 0;
-    height: 0;
-    margin: auto;
-    content: '';
-    border-radius: 5px;
-
-    border-top: 4px solid #777;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-}
-
-.select-group:hover:after{
-	border-top: 4px solid #fff;
-}
 
 select{
    background: #fff;
@@ -100,9 +79,8 @@ select{
 }
 
 select:hover{
-    background: #3498db;
-    color: #fff;
-    border: #3498db;
+    color: #000;
+	border:2px solid #3498db;
 }
 
 select::selection {

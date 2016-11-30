@@ -1,9 +1,40 @@
-<<<<<<< HEAD
-(function($) {
-$.fn.hoge = function() {
-=======
+﻿<?php
+require_once __DIR__ . '/func.php';
+require_unlogined_session();
+$conn = pg_connect("dbname=db_3836 user=d33836 host=192.168.109.210");
+$bango = $_SESSION['id'];
+
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Highcharts Example</title>
+
+<link rel="stylesheet" type="text/css" href="./assets/resultstyle.css">
+<link rel="stylesheet" type="text/css" href="./assets/button.css">
+
+<script src="./graph/highcharts.js"></script>
+<script src="./graph/exporting.js"></script>
+<script src="./graph/grid-light.js"></script>
+
+<script src="./graph/graph.js"></script>
+
+<script type="text/javascript" src="./assets/jquery1.8.2.min.js"></script>
+<style type="text/css">
+${demo.css}
+</style>
+<script type="text/javascript">
+$(function(){
+   $('#container').hoge();
+});
+</script>
+</head>
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+<script>
 window.onload = function() {
->>>>>>> 008a53cdb20a5709265945b8df3b49f846833634
     // Build the chart
     Highcharts.chart(this, {
       chart: {
@@ -54,12 +85,9 @@ window.onload = function() {
         }]
       }]
     });
-<<<<<<< HEAD
-    return (this);
-  };
-}(jQuery));
-=======
 
   };
 };
->>>>>>> 008a53cdb20a5709265945b8df3b49f846833634
+</script>
+</body>
+</html>

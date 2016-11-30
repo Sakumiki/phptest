@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+=======
+@import url(../fonts/Montserrat.css);
+@import url(../fonts/opne_sans.css);
+>>>>>>> 008a53cdb20a5709265945b8df3b49f846833634
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
