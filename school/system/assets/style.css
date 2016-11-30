@@ -1,0 +1,59 @@
+input[type="radio"]{
+	display: none;
+	cursor: pointer !important;
+}
+input[type="radio"]+label{/*チェックボックス*/
+	cursor: pointer !important;
+	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+	padding: 0 3px;
+	transition-property: background-color;
+	transition-duration:0.2s;
+	transition-delay:0s;
+	border-radius: 5px;
+	border:2px solid #ccc;
+	height:30px;
+	line-height:30px;
+	padding-left:6px;
+	padding-right:6px;
+}
+input[type="radio"]+label:hover{ /*オンマウス状態のラベルの装飾*/
+	background-color: #1a6bc6;
+	color: white;
+	border-color:#1a6bc6;
+	border-radius: 5px;
+}
+input[type="radio"]:checked+label{
+	border:2px solid #1a6bc6;
+	color:#1a6bc6;
+	background:white;
+}
+
+
+
+ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li.birth {
+    margin-bottom: 40px;
+}
+
+p {
+    margin-right: 10px;
+    width:100px;
+    float: left;
+}
+
+ul {
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+input#geId {
+    display: block;
+    margin: 0 auto;
+}

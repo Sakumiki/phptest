@@ -1,5 +1,4 @@
-(function($) {
-$.fn.hoge = function() {
+window.onload = function() {
     // Build the chart
     Highcharts.chart(this, {
       chart: {
@@ -50,6 +49,6 @@ $.fn.hoge = function() {
         }]
       }]
     });
-    return (this);
+
   };
-}(jQuery));
+};
